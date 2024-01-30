@@ -92,3 +92,14 @@ export const getQuestionsInDb = async (req, res) => {
 }
 
 
+export const getDbQuestionById = async (req, res) => {
+
+    const id = req.params.id
+
+    try {
+        const question = await Question.findOne({ _id: id })
+        res.status(200).json({ question: question })
+    } catch (error) {
+        res.status(error.status).json({ message: error.message })
+    }
+}

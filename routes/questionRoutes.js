@@ -12,6 +12,8 @@ questionRoutes.post("/create-question", authenticateToken, createQuestion)
 
 questionRoutes.get("/questions", getQuestionsInDb)
 
+questionRoutes.get("/questions/db/:id", getDbQuestionById)
+
 questionRoutes.get("/:id", getQuestionDetails)
 
 
