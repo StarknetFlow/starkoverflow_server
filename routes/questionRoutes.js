@@ -1,6 +1,6 @@
 import { Router } from "express"
 import jwt from "jsonwebtoken"
-import { createQuestion, getAllQuestions, getQuestionDetails, getQuestionsInDb } from "../controllers/questions.js"
+import { createQuestion, getAllQuestions, getDbQuestionById, getQuestionDetails, getQuestionsInDb } from "../controllers/questions.js"
 
 const { sign, verify } = jwt
 
